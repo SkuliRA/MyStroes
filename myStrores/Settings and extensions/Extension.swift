@@ -22,6 +22,19 @@ struct Indicators {
 // Дата учитывается в универсальном формате UTC
 extension Date {
     
+    // способ через вычисляемое свойство
+    var beginOfDay: Date {
+        return Calendar.current.startOfDay(for: self)
+    }
+    
+    var endOfDay: Date {
+        var components = DateComponents()
+        components.day = 1
+        components.second = -1
+        return Calendar.current.date(byAdding: components, to: beginOfDay)!
+    }
+    
+    // способ через методы
     func startOfMonth() -> Date {
         return Calendar.current.date(from: Calendar.current.dateComponents([.year, .month], from: Calendar.current.startOfDay(for: self)))!
     }
@@ -33,6 +46,7 @@ extension Date {
     func startOfDay() -> Date {
         return Calendar.current.startOfDay(for: self)
     }
+    
     
 }
 

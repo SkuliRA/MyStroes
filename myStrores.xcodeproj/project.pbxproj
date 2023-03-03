@@ -18,6 +18,8 @@
 		06565B18299F357C000EF0BC /* ReportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06565B17299F357C000EF0BC /* ReportsViewController.swift */; };
 		06565B1A299F3589000EF0BC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06565B19299F3589000EF0BC /* SettingsViewController.swift */; };
 		06565B20299F46A6000EF0BC /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06565B1F299F46A6000EF0BC /* NetworkManager.swift */; };
+		0685631429AC4F6C006B953D /* SalesReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0685631329AC4F6C006B953D /* SalesReportViewController.swift */; };
+		0685631629AC5999006B953D /* CellSalesReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0685631529AC5999006B953D /* CellSalesReport.swift */; };
 		0688A1CC2996A26D00F5FC3B /* RealmModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0688A1CB2996A26D00F5FC3B /* RealmModels.swift */; };
 		0688A1CE29979E5900F5FC3B /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0688A1CD29979E5900F5FC3B /* Extension.swift */; };
 		0688A1D02999D51200F5FC3B /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0688A1CF2999D51200F5FC3B /* RealmManager.swift */; };
@@ -61,6 +63,8 @@
 		06565B17299F357C000EF0BC /* ReportsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsViewController.swift; sourceTree = "<group>"; };
 		06565B19299F3589000EF0BC /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		06565B1F299F46A6000EF0BC /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		0685631329AC4F6C006B953D /* SalesReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesReportViewController.swift; sourceTree = "<group>"; };
+		0685631529AC5999006B953D /* CellSalesReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellSalesReport.swift; sourceTree = "<group>"; };
 		0688A1CB2996A26D00F5FC3B /* RealmModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModels.swift; sourceTree = "<group>"; };
 		0688A1CD29979E5900F5FC3B /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		0688A1CF2999D51200F5FC3B /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
@@ -165,6 +169,8 @@
 				06565B17299F357C000EF0BC /* ReportsViewController.swift */,
 				06565B19299F3589000EF0BC /* SettingsViewController.swift */,
 				06CC89E0299B5FC5005C6693 /* TableViewCell.swift */,
+				0685631329AC4F6C006B953D /* SalesReportViewController.swift */,
+				0685631529AC5999006B953D /* CellSalesReport.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -448,9 +454,11 @@
 				0688A1CE29979E5900F5FC3B /* Extension.swift in Sources */,
 				06CC89E1299B5FC5005C6693 /* TableViewCell.swift in Sources */,
 				0635CE152993F8E00050463B /* AppDelegate.swift in Sources */,
+				0685631629AC5999006B953D /* CellSalesReport.swift in Sources */,
 				0688A1CC2996A26D00F5FC3B /* RealmModels.swift in Sources */,
 				06139B2F2995F84C009F055F /* ConnectionSettings.swift in Sources */,
 				0635CE172993F8E00050463B /* SceneDelegate.swift in Sources */,
+				0685631429AC4F6C006B953D /* SalesReportViewController.swift in Sources */,
 				0635CE4529940C570050463B /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -634,6 +642,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -663,6 +672,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

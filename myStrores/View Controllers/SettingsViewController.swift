@@ -8,24 +8,39 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
-
+    
+    var networkManager = NetworkManager()
+    @IBOutlet weak var requestDatePicker: UIDatePicker!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        networkManager.delegate = self
     }
     
     @IBAction func requestFrom1CButton(_ sender: Any) {
+        activityIndicator.startAnimating()
+        networkManager.sendJSONResponse(date: requestDatePicker.date)
+        // сохраним дату в настройках пользователя
+        // и будем держать ее там, пока не получим данные за этот период
+        let defaults = UserDefaults.standard
+        defaults.set(requestDatePicker.date, forKey: "LastDate")
+    }
+
+}
+
+extension SettingsViewController: NetworkManagerDelegate {
+   
+    func afterExchange(error: String) {
+        DispatchQueue.main.async {
+            self.activityIndicator.stopAnimating()
+        }
     }
     
-    /*
-    // MARK: - Navigation
+  
+    func refresh() {
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-    */
-
+    
 }

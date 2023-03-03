@@ -13,7 +13,7 @@ enum BaseCode: String, CaseIterable {
     case festival = "FV"
 }
 
-enum StoreName: String {
+enum StoreName: String, CaseIterable {
     case flagman = "Магазин Fronzoli Флагман "
     case festival = "Магазин Fronzoli Фестиваль"
 }
